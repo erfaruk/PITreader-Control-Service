@@ -5,6 +5,8 @@ namespace ReaderWorker.Models.Database;
 
 public partial class Transponder
 {
+    public int KeyId { get; set; }
+
     public string SecurityId { get; set; } = null!;
 
     public string? SerialNo { get; set; }
@@ -16,6 +18,8 @@ public partial class Transponder
     public DateTime? EndDate { get; set; }
 
     public int? UserId { get; set; }
+
+    public virtual ICollection<Pitreader> Pitreaders { get; set; } = new List<Pitreader>();
 
     public virtual User? User { get; set; }
 }

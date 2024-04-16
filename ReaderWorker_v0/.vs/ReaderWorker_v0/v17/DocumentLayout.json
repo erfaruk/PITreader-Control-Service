@@ -1,12 +1,173 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|c:\\users\\asus\\documents\\github\\pitreader-control-service\\readerworker_v0\\readerworker\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|solutionrelative:readerworker\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|c:\\users\\asus\\documents\\github\\pitreader-control-service\\readerworker_v0\\readerworker\\models\\api\\permissions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|solutionrelative:readerworker\\models\\api\\permissions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|c:\\users\\asus\\documents\\github\\pitreader-control-service\\readerworker_v0\\readerworker\\models\\api\\authenticationstatusresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|solutionrelative:readerworker\\models\\api\\authenticationstatusresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|c:\\users\\asus\\documents\\github\\pitreader-control-service\\readerworker_v0\\readerworker\\models\\database\\readerexpertcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|solutionrelative:readerworker\\models\\database\\readerexpertcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|c:\\users\\asus\\documents\\github\\pitreader-control-service\\readerworker_v0\\readerworker\\models\\database\\transponder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|solutionrelative:readerworker\\models\\database\\transponder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|c:\\users\\asus\\documents\\github\\pitreader-control-service\\readerworker_v0\\readerworker\\services\\readers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|solutionrelative:readerworker\\services\\readers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|c:\\users\\asus\\documents\\github\\pitreader-control-service\\readerworker_v0\\readerworker\\services\\readerstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|solutionrelative:readerworker\\services\\readerstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|c:\\users\\asus\\documents\\github\\pitreader-control-service\\readerworker_v0\\readerworker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|solutionrelative:readerworker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|c:\\users\\asus\\documents\\github\\pitreader-control-service\\readerworker_v0\\readerworker\\models\\api\\securityid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|solutionrelative:readerworker\\models\\api\\securityid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Permissions.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Models\\API\\Permissions.cs",
+              "RelativeDocumentMoniker": "ReaderWorker\\Models\\API\\Permissions.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Models\\API\\Permissions.cs",
+              "RelativeToolTip": "ReaderWorker\\Models\\API\\Permissions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T14:02:22.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Transponder.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Models\\Database\\Transponder.cs",
+              "RelativeDocumentMoniker": "ReaderWorker\\Models\\Database\\Transponder.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Models\\Database\\Transponder.cs",
+              "RelativeToolTip": "ReaderWorker\\Models\\Database\\Transponder.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T13:47:11.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Readers.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Services\\Readers.cs",
+              "RelativeDocumentMoniker": "ReaderWorker\\Services\\Readers.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Services\\Readers.cs",
+              "RelativeToolTip": "ReaderWorker\\Services\\Readers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T12:25:20.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReaderExpertContext.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Models\\Database\\ReaderExpertContext.cs",
+              "RelativeDocumentMoniker": "ReaderWorker\\Models\\Database\\ReaderExpertContext.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Models\\Database\\ReaderExpertContext.cs",
+              "RelativeToolTip": "ReaderWorker\\Models\\Database\\ReaderExpertContext.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAgwAYAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T12:25:02.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Program.cs",
+              "RelativeDocumentMoniker": "ReaderWorker\\Program.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Program.cs",
+              "RelativeToolTip": "ReaderWorker\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T12:11:07.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SecurityId.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Models\\API\\SecurityId.cs",
+              "RelativeDocumentMoniker": "ReaderWorker\\Models\\API\\SecurityId.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Models\\API\\SecurityId.cs",
+              "RelativeToolTip": "ReaderWorker\\Models\\API\\SecurityId.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAmwDsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T09:14:02.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthenticationStatusResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Models\\API\\AuthenticationStatusResponse.cs",
+              "RelativeDocumentMoniker": "ReaderWorker\\Models\\API\\AuthenticationStatusResponse.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Models\\API\\AuthenticationStatusResponse.cs",
+              "RelativeToolTip": "ReaderWorker\\Models\\API\\AuthenticationStatusResponse.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwB4AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T09:08:12.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ReaderStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Services\\ReaderStatus.cs",
+              "RelativeDocumentMoniker": "ReaderWorker\\Services\\ReaderStatus.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Services\\ReaderStatus.cs",
+              "RelativeToolTip": "ReaderWorker\\Services\\ReaderStatus.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAQwDoAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T08:29:17.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Worker.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Worker.cs",
+              "RelativeDocumentMoniker": "ReaderWorker\\Worker.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Worker.cs",
+              "RelativeToolTip": "ReaderWorker\\Worker.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAIwDEAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T08:48:54.259Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

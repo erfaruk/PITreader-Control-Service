@@ -12,21 +12,21 @@
 //
 // SPDX-License-Identifier: MIT
 
-namespace Pilz.PITreader.Client.Model
+namespace ReaderWorker.Models.API
 {
     /// <summary>
-    /// Configuration of 24 V I/O port
+    /// Signal present at the 24 V I/O port
     /// </summary>
-    public enum IoPortMode
+    public enum IoPortValue
     {
         /// <summary>
-        /// The 24 V I/O port is configured as an input.
+        /// Low signal (0 V)
         /// </summary>
-        Input,
+        Low = 0,
 
         /// <summary>
-        /// The 24 V I/O port is configured as an output.
+        /// High signal (24 V)
         /// </summary>
-        Output
+        High = 1
     }
 }

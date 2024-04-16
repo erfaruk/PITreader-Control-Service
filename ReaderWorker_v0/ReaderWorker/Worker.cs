@@ -1,5 +1,6 @@
+using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.Logging;
-using Pilz.PITreader.Client.Model;
+using ReaderWorker.Models.API;
 using ReaderWorker.Models.Database;
 using ReaderWorker.Services;
 
@@ -8,12 +9,14 @@ namespace ReaderWorker
     public class Worker : BackgroundService
     {
         private readonly ILogger<Worker> _logger;
-        private readonly  ReaderStatus _readers;
+        private readonly Readers _readers;
+        private readonly  ReaderStatus _status;
 
         public Worker(ILogger<Worker> logger)
         {
             _logger = logger;
-            _readers = new ReaderStatus();
+            _readers = new Readers();
+            _status = new ReaderStatus();
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -25,22 +28,60 @@ namespace ReaderWorker
                     //_logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
                    
                     List<Pitreader> readerList = _readers.AccesControl();
-                    
 
-                    readerList?.ForEach(PITReaders =>
+                    readerList?.ForEach(PITReader =>
                     {
-                        var statusResponse = _readers.Status( PITReaders.Ipaddress).Result;
-                        if (statusResponse != null)
+                        var statusResponse = _status.Status( PITReader.Ipaddress).Result;
+                        var statusAuthResponse = _status.StatusAuth(PITReader.Ipaddress, PITReader.Port, PITReader.Apitoken).Result;
+                        using var context = new ReaderExpertContext();
+                        var entityToUpdate = context.Pitreaders.FirstOrDefault(e => e.ReaderId == PITReader.ReaderId);
+                        if (statusResponse != null && statusAuthResponse!=null)
                         {
-                            _logger.LogInformation($"IP Address:{PITReaders.Ipaddress}\n " +
+                            _logger.LogInformation($"IP Address:{PITReader.Ipaddress}\n " +
                                                    $"\tProdType:{statusResponse.ProductType}" +
                                                    $"\tHostName:{statusResponse.HostName}" +
                                                    $"\tMacAddress:{statusResponse.MacAddress}" +
-                                                   $"\tAuthenticated:{statusResponse.TransponderAuthenticated}");
-                }
+                                                   $"\tAuthenticated:{statusResponse.TransponderAuthenticated}\n" +
+                                                   $"\tAuthenticated:{statusAuthResponse.Authenticated}" +
+                                                   $"\tPermission:{statusAuthResponse.Permission}" +
+                                                   $"\tSecurityId:{statusAuthResponse.securityId}");
+
+                            
+                            if (entityToUpdate != null)
+                            {
+                                if (statusResponse.TransponderAuthenticated == true && entityToUpdate.Status != true)
+                                {
+                                    entityToUpdate.Status = true;
+                                    var keyId = context.Transponders.FirstOrDefault(e => e.SecurityId == statusAuthResponse.securityId);
+                                    Permission permission = statusAuthResponse.Permission;
+                                    int permissionVal = Convert.ToInt32(permission.ToString().Replace("Permission_",""));
+                                    if (keyId != null)
+                                    {
+                                        entityToUpdate.KeyId = keyId.KeyId;
+                                    }
+                                    entityToUpdate.Permission = permissionVal;
+                                    context.SaveChanges();
+                                }
+                                else if (statusResponse.TransponderAuthenticated == false && entityToUpdate.Status != false)
+                                {
+                                    entityToUpdate.Status = false;
+                                    entityToUpdate.KeyId = null;
+                                    entityToUpdate.Permission=null;
+                                    context.SaveChanges();
+                                }
+                            }      
+                        }
                         else
                         {
-                            _logger.LogInformation($"{PITReaders.Ipaddress} Cihazdan dönüþ alýnamadý");
+                            _logger.LogInformation($"{PITReader.Ipaddress} Cihazdan dönüþ alýnamadý");
+                            //if (entityToUpdate != null)
+                            //{
+                            //    entityToUpdate.Status = false;
+                            //    entityToUpdate.KeyId = null;
+                            //    entityToUpdate.Permission = null;
+                            //    context.SaveChanges();
+                            //}
+                                
                         }
                     }
                     );

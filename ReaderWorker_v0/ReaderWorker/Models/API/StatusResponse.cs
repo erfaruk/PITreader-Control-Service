@@ -15,7 +15,7 @@
 using System;
 using System.Text.Json.Serialization;
 
-namespace Pilz.PITreader.Client.Model
+namespace ReaderWorker.Models.API
 {
     /// <summary>
     /// Current status information on the status and properties of the device.

@@ -15,7 +15,13 @@ public partial class ReaderExpertContext : DbContext
     {
     }
 
+    public virtual DbSet<Group> Groups { get; set; }
+
+    public virtual DbSet<KeyGroup> KeyGroups { get; set; }
+
     public virtual DbSet<Pitreader> Pitreaders { get; set; }
+
+    public virtual DbSet<Server> Servers { get; set; }
 
     public virtual DbSet<Transponder> Transponders { get; set; }
 
@@ -27,6 +33,24 @@ public partial class ReaderExpertContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Group>(entity =>
+        {
+            entity.Property(e => e.GroupId).ValueGeneratedNever();
+            entity.Property(e => e.Name).HasMaxLength(30);
+        });
+
+        modelBuilder.Entity<KeyGroup>(entity =>
+        {
+            entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.EndTime).HasColumnType("datetime");
+            entity.Property(e => e.SecurityId).HasMaxLength(50);
+            entity.Property(e => e.StartDate).HasColumnType("datetime");
+
+            entity.HasOne(d => d.Group).WithMany(p => p.KeyGroups)
+                .HasForeignKey(d => d.GroupId)
+                .HasConstraintName("FK_KeyGroups_Groups");
+        });
+
         modelBuilder.Entity<Pitreader>(entity =>
         {
             entity.HasKey(e => e.ReaderId);
@@ -42,17 +66,32 @@ public partial class ReaderExpertContext : DbContext
                 .HasColumnName("IPAddress");
             entity.Property(e => e.Location).HasMaxLength(30);
             entity.Property(e => e.Name).HasMaxLength(30);
+
+            entity.HasOne(d => d.Key).WithMany(p => p.Pitreaders)
+                .HasForeignKey(d => d.KeyId)
+                .HasConstraintName("FK_PITreaders_Transponders");
+
+            entity.HasOne(d => d.Server).WithMany(p => p.Pitreaders)
+                .HasForeignKey(d => d.ServerId)
+                .HasConstraintName("FK_PITreaders_Servers");
+        });
+
+        modelBuilder.Entity<Server>(entity =>
+        {
+            entity.Property(e => e.Macaddress)
+                .HasMaxLength(50)
+                .HasColumnName("MACAddress");
         });
 
         modelBuilder.Entity<Transponder>(entity =>
         {
-            entity.HasKey(e => e.SecurityId);
+            entity.HasKey(e => e.KeyId).HasName("PK_Transponders_1");
 
-            entity.Property(e => e.SecurityId).HasMaxLength(50);
             entity.Property(e => e.EndDate).HasColumnType("datetime");
             entity.Property(e => e.OrderNo)
                 .HasMaxLength(50)
                 .IsFixedLength();
+            entity.Property(e => e.SecurityId).HasMaxLength(50);
             entity.Property(e => e.SerialNo).HasMaxLength(50);
             entity.Property(e => e.StartTime).HasColumnType("datetime");
 
