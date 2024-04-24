@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using System.Text.Json;
 using System.Net.Http.Headers;
 using ReaderWorker.Models.API;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 
 
 namespace ReaderWorker.Services
@@ -24,6 +26,8 @@ namespace ReaderWorker.Services
             };
             var httpClient = new HttpClient(handler);
             httpClient.Timeout = TimeSpan.FromSeconds(1);
+            // TLS Session Tickets desteği için HttpClient yapılandırması
+            handler.UseDefaultCredentials = true; // TLS Session Tickets'ı destekleyen bir REST istemcisi kullanılacaksa, varsayılan kimlik doğrulama kullanılır.
             string Url = $"https://{ip}/api/status/";
             // HTTP isteği için Authorization başlığı ekle
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "Gz5S2QrZnG1/neyHj6c4gg==");
@@ -42,13 +46,13 @@ namespace ReaderWorker.Services
 
         public async Task<AuthenticationStatusResponse> StatusAuth(string ip, int port, string token)
         {
-            //sha certificate disable
-            var handler = new HttpClientHandler
-            {
-                ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
-            };
+            var handler = new HttpClientHandler();
+            // Sertifika doğrulamasını devre dışı bırakma
+            handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
             var httpClient = new HttpClient(handler);
-            httpClient.Timeout = TimeSpan.FromSeconds(10);
+            httpClient.Timeout = TimeSpan.FromSeconds(2);
+            // TLS Session Tickets desteği için HttpClient yapılandırması
+            handler.UseDefaultCredentials = true; // TLS Session Tickets'ı destekleyen bir REST istemcisi kullanılacaksa, varsayılan kimlik doğrulama kullanılır.
             string Url = $"https://{ip}:{port}/api/status/authentication";
             // HTTP isteği için Authorization başlığı ekle
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", $"{token}");
@@ -65,5 +69,36 @@ namespace ReaderWorker.Services
                 return null;
             }
         }
+        // SSL sertifikasını doğrulama fonksiyonu
+        static bool ValidateCertificate(HttpRequestMessage request, X509Certificate2 certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
+        {
+            // Örnek doğrulama: Herhangi bir sertifikayı kabul et
+            return true;
+        }
     }
 }
+
+
+
+
+///////////////////////
+/////sha certificate disable
+//var handler = new HttpClientHandler();
+// SSL sertifikasını doğrulamak için gerekirse ayarlar yapılabilir
+//handler.ServerCertificateCustomValidationCallback = ValidateCertificate;
+// Sertifika doğrulamasını devre dışı bırakma
+//handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
+//{
+//    ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+//};
+
+
+// Sertifika yükleme
+////X509Certificate2 certificate = new X509Certificate2(certificatePath);
+////handler.ClientCertificates.Add(certificate);
+///
+// Sertifika dosyasının yolu
+////string certificateFileName = "sertifika.cer";
+// Sertifika dosyasının tam yolunu alın
+////string certificatePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Certificates", certificateFileName);
+//sha certificate disable

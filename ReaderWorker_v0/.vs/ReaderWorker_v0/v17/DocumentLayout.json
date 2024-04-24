@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|c:\\users\\asus\\documents\\github\\pitreader-control-service\\readerworker_v0\\readerworker\\services\\readerstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|solutionrelative:readerworker\\services\\readerstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|c:\\users\\asus\\documents\\github\\pitreader-control-service\\readerworker_v0\\readerworker\\services\\readers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|solutionrelative:readerworker\\services\\readers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|c:\\users\\asus\\documents\\github\\pitreader-control-service\\readerworker_v0\\readerworker\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|solutionrelative:readerworker\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,14 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|c:\\users\\asus\\documents\\github\\pitreader-control-service\\readerworker_v0\\readerworker\\models\\database\\transponder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|solutionrelative:readerworker\\models\\database\\transponder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|c:\\users\\asus\\documents\\github\\pitreader-control-service\\readerworker_v0\\readerworker\\services\\readers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|solutionrelative:readerworker\\services\\readers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|c:\\users\\asus\\documents\\github\\pitreader-control-service\\readerworker_v0\\readerworker\\services\\readerstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|solutionrelative:readerworker\\services\\readerstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D89B459-D30D-4A48-AEBC-AD0B7A53AB02}|ReaderWorker\\ReaderWorker.csproj|c:\\users\\asus\\documents\\github\\pitreader-control-service\\readerworker_v0\\readerworker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +50,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Permissions.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Models\\API\\Permissions.cs",
               "RelativeDocumentMoniker": "ReaderWorker\\Models\\API\\Permissions.cs",
@@ -63,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Transponder.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Models\\Database\\Transponder.cs",
               "RelativeDocumentMoniker": "ReaderWorker\\Models\\Database\\Transponder.cs",
@@ -76,7 +76,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Readers.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Services\\Readers.cs",
               "RelativeDocumentMoniker": "ReaderWorker\\Services\\Readers.cs",
@@ -89,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ReaderExpertContext.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Models\\Database\\ReaderExpertContext.cs",
               "RelativeDocumentMoniker": "ReaderWorker\\Models\\Database\\ReaderExpertContext.cs",
@@ -128,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AuthenticationStatusResponse.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Models\\API\\AuthenticationStatusResponse.cs",
               "RelativeDocumentMoniker": "ReaderWorker\\Models\\API\\AuthenticationStatusResponse.cs",
@@ -141,28 +141,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ReaderStatus.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Services\\ReaderStatus.cs",
-              "RelativeDocumentMoniker": "ReaderWorker\\Services\\ReaderStatus.cs",
-              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Services\\ReaderStatus.cs",
-              "RelativeToolTip": "ReaderWorker\\Services\\ReaderStatus.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAQwDoAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T08:29:17.99Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Worker.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Worker.cs",
               "RelativeDocumentMoniker": "ReaderWorker\\Worker.cs",
               "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Worker.cs",
               "RelativeToolTip": "ReaderWorker\\Worker.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAIwDEAAAA3AAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAuwCIAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-16T08:48:54.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReaderStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Services\\ReaderStatus.cs",
+              "RelativeDocumentMoniker": "ReaderWorker\\Services\\ReaderStatus.cs",
+              "ToolTip": "C:\\Users\\Asus\\Documents\\GitHub\\PITreader-Control-Service\\ReaderWorker_v0\\ReaderWorker\\Services\\ReaderStatus.cs",
+              "RelativeToolTip": "ReaderWorker\\Services\\ReaderStatus.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAQwDUAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T08:29:17.99Z",
               "EditorCaption": ""
             }
           ]

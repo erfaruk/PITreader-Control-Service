@@ -26,8 +26,8 @@ namespace ReaderWorker
                 if (_logger.IsEnabled(LogLevel.Information))
                 {
                     //_logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-                   
-                    List<Pitreader> readerList = _readers.AccesControl();
+                    _logger.LogInformation("--------------------------------------------------------------------------------");
+                    List <Pitreader> readerList = _readers.AccesControl();
 
                     readerList?.ForEach(PITReader =>
                     {
@@ -87,7 +87,7 @@ namespace ReaderWorker
                     );
                     
                 }
-                await Task.Delay(300, stoppingToken);
+                await Task.Delay(500, stoppingToken);
             }
         }
     }
