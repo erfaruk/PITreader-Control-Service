@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ReaderWorker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3cbcd34d8dd7c750023ddc6a9bdf068cee04ed54")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79f0f27d26eea3db7cca25a6804f5d489146bcdc")]
 [assembly: System.Reflection.AssemblyProductAttribute("ReaderWorker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ReaderWorker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -15,15 +15,17 @@ public partial class Pitreader
 
     public string Apitoken { get; set; } = null!;
 
-    public int? BlockListId { get; set; }
-
     public int Port { get; set; }
 
     public string? Fingerprint { get; set; }
 
+    public bool? Status { get; set; }
+
+    public int? BlockListId { get; set; }
+
     public int? ServerId { get; set; }
 
-    public bool? Status { get; set; }
+    public bool? IsKeyIn { get; set; }
 
     public int? KeyId { get; set; }
 

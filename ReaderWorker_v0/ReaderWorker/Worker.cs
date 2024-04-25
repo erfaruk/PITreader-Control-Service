@@ -49,7 +49,7 @@ namespace ReaderWorker
                             
                             if (entityToUpdate != null)
                             {
-                                if (statusResponse.TransponderAuthenticated == true && entityToUpdate.Status != true)
+                                if (statusResponse.TransponderAuthenticated == true && entityToUpdate.IsKeyIn != true)
                                 {
                                     entityToUpdate.Status = true;
                                     var keyId = context.Transponders.FirstOrDefault(e => e.SecurityId == statusAuthResponse.securityId);
@@ -62,9 +62,9 @@ namespace ReaderWorker
                                     entityToUpdate.Permission = permissionVal;
                                     context.SaveChanges();
                                 }
-                                else if (statusResponse.TransponderAuthenticated == false && entityToUpdate.Status != false)
+                                else if (statusResponse.TransponderAuthenticated == false && entityToUpdate.IsKeyIn != false)
                                 {
-                                    entityToUpdate.Status = false;
+                                    entityToUpdate.IsKeyIn = false;
                                     entityToUpdate.KeyId = null;
                                     entityToUpdate.Permission=null;
                                     context.SaveChanges();
@@ -74,13 +74,14 @@ namespace ReaderWorker
                         else
                         {
                             _logger.LogInformation($"{PITReader.Ipaddress} Cihazdan dönüþ alýnamadý");
-                            //if (entityToUpdate != null)
-                            //{
-                            //    entityToUpdate.Status = false;
-                            //    entityToUpdate.KeyId = null;
-                            //    entityToUpdate.Permission = null;
-                            //    context.SaveChanges();
-                            //}
+                            if (entityToUpdate != null)
+                            {
+                                entityToUpdate.IsKeyIn = false;
+                                entityToUpdate.Status = false;
+                                entityToUpdate.KeyId = null;
+                                entityToUpdate.Permission = null;
+                                context.SaveChanges();
+                            }
                                 
                         }
                     }

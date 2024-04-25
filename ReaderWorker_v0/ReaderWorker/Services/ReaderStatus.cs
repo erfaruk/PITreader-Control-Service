@@ -25,7 +25,7 @@ namespace ReaderWorker.Services
                 ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
             };
             var httpClient = new HttpClient(handler);
-            httpClient.Timeout = TimeSpan.FromSeconds(1);
+            httpClient.Timeout = TimeSpan.FromSeconds(0.3);
             // TLS Session Tickets desteği için HttpClient yapılandırması
             handler.UseDefaultCredentials = true; // TLS Session Tickets'ı destekleyen bir REST istemcisi kullanılacaksa, varsayılan kimlik doğrulama kullanılır.
             string Url = $"https://{ip}/api/status/";
@@ -50,7 +50,7 @@ namespace ReaderWorker.Services
             // Sertifika doğrulamasını devre dışı bırakma
             handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
             var httpClient = new HttpClient(handler);
-            httpClient.Timeout = TimeSpan.FromSeconds(2);
+            httpClient.Timeout = TimeSpan.FromSeconds(0.3);
             // TLS Session Tickets desteği için HttpClient yapılandırması
             handler.UseDefaultCredentials = true; // TLS Session Tickets'ı destekleyen bir REST istemcisi kullanılacaksa, varsayılan kimlik doğrulama kullanılır.
             string Url = $"https://{ip}:{port}/api/status/authentication";

@@ -102,15 +102,13 @@ public partial class ReaderExpertContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId);
+            entity.HasKey(e => e.UserId).HasName("PK_Users_1");
 
-            entity.Property(e => e.UserId).ValueGeneratedNever();
             entity.Property(e => e.Company).HasMaxLength(50);
             entity.Property(e => e.Description).HasMaxLength(100);
             entity.Property(e => e.Email)
                 .HasMaxLength(60)
                 .IsFixedLength();
-            entity.Property(e => e.Id).ValueGeneratedOnAdd();
             entity.Property(e => e.Name).HasMaxLength(30);
             entity.Property(e => e.PhoneNumber).HasMaxLength(12);
             entity.Property(e => e.Role).HasMaxLength(50);
