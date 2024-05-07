@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using ReaderWorker.Models.API;
 using ReaderWorker.Models.Database;
 using ReaderWorker.Services;
@@ -48,16 +49,29 @@ namespace ReaderWorker
 
                             
                             if (entityToUpdate != null)
+                                entityToUpdate.Status = true;
+                                context.SaveChanges();
+
                             {
                                 if (statusResponse.TransponderAuthenticated == true && entityToUpdate.IsKeyIn != true)
                                 {
-                                    entityToUpdate.Status = true;
+                                    entityToUpdate.IsKeyIn = true;
                                     var keyId = context.Transponders.FirstOrDefault(e => e.SecurityId == statusAuthResponse.securityId);
                                     Permission permission = statusAuthResponse.Permission;
                                     int permissionVal = Convert.ToInt32(permission.ToString().Replace("Permission_",""));
                                     if (keyId != null)
                                     {
                                         entityToUpdate.KeyId = keyId.KeyId;
+                                    }
+                                    else
+                                    {
+                                        var newKey = new Transponder
+                                        {
+                                            OrderNo = statusAuthResponse.OrderNumber.ToString(),
+                                            SecurityId= statusAuthResponse.securityId,
+                                            SerialNo= statusAuthResponse.SerialNumber.ToString(),
+                                        };
+                                        context.Transponders.Add(newKey);
                                     }
                                     entityToUpdate.Permission = permissionVal;
                                     context.SaveChanges();
@@ -88,7 +102,7 @@ namespace ReaderWorker
                     );
                     
                 }
-                await Task.Delay(500, stoppingToken);
+                await Task.Delay(700, stoppingToken);
             }
         }
     }
